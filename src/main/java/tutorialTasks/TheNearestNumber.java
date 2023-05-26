@@ -13,18 +13,23 @@ public class TheNearestNumber {
     public static void main(String[] args) {
         List<Integer> result = new ArrayList<>();
         Scanner in = new Scanner(System.in);
-        System.out.print("Input quantity of numbers : ");
-        int N = in.nextInt();
+        int N = 0;
+       System.out.print("Input quantity of numbers : ");
+        N = in.nextInt();
+        if (N < 0 && N > 10000) System.err.println("The temperature is out of the range");
         for (int i = 0; i < N; i++) {
-            System.out.print("result[" + i + "] : " );
+            System.out.print("result[" + i + "] : ");
             int t = in.nextInt();
-            result.add(t);
+            if (t >= -273 && t <= 5526) result.add(t);
+            else System.err.println("The temperature is out of the range");
         }
         int closest = 0;
         if (!result.isEmpty()) {
             closest = Math.abs(result.get(0));
             for (Integer element : result) {
-                if (Math.abs(element) < closest) closest = element;
+                if (Math.abs(element) <= Math.abs(closest)) {
+                    closest = element == closest ? Math.abs(element) : element ;
+                }
             }
         }
 
