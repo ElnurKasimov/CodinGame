@@ -16,7 +16,7 @@ public class TheNearestNumber {
         int N = 0;
        System.out.print("Input quantity of numbers : ");
         N = in.nextInt();
-        if (N < 0 && N > 10000) System.err.println("The temperature is out of the range");
+        if (N < 0 || N > 10000) System.err.println("The temperature is out of the range");
         for (int i = 0; i < N; i++) {
             System.out.print("result[" + i + "] : ");
             int t = in.nextInt();
