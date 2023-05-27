@@ -9,7 +9,9 @@ class TheNearestNumberTest {
     @Test
     void testThatMethodWorksCorrectlyWhenListIsEmpty () {
         //given
+
         //when
+
         //then
 
     }
@@ -17,7 +19,9 @@ class TheNearestNumberTest {
     @Test
     void testThatMethodWorksCorrectlyWithPositiveNumbersOnly () {
         //given
+
         //when
+
         //then
     }
 
@@ -37,14 +41,18 @@ class TheNearestNumberTest {
     @Test
     void testThatMethodWorksCorrectlyWhenEqualsTwoNegativeNumbers () {
         //given
+
         //when
+
         //then
     }
 
     @Test
     void testThatMethodWorksCorrectlyWhenEqualsTwoPositiveNumbers () {
         //given
+
         //when
+
         //then
     }
 }
